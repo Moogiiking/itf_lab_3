@@ -3,114 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
+    <title>thefacebook</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e9ebee;
+            background-color: #e7e7e7;
+            margin: 0;
+            padding: 0;
         }
-        table {
-            width: 100%;
-            max-width: 800px;
-            margin: 20px auto;
-            border-collapse: collapse;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        td {
+        #header {
+            background: #3b5998;
+            color: #ffffff;
             padding: 10px;
-            border: 1px solid #ddd;
-            vertical-align: top;
-        }
-        .header {
-            background-color: #3b5998;
-            color: white;
             text-align: center;
-            padding: 10px;
+        }
+        #header h1 {
+            margin: 0;
             font-size: 24px;
-            font-weight: bold;
         }
-        .sidebar {
+        #container {
+            display: flex;
+            margin: 20px auto;
+            max-width: 1000px;
+        }
+        #left-panel, #right-panel {
+            background: #ffffff;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        #left-panel {
             width: 25%;
-            background-color: #f5f6f7;
+            margin-right: 20px;
         }
-        .sidebar a {
-            display: block;
-            padding: 8px;
-            color: #333;
+        #right-panel {
+            flex: 1;
+        }
+        h2 {
+            font-size: 18px;
+            color: #3b5998;
+        }
+        a {
             text-decoration: none;
+            color: #3b5998;
         }
-        .sidebar a:hover {
-            background-color: #ddd;
+        a:hover {
+            text-decoration: underline;
         }
-        .profile-picture {
-            text-align: center;
+        .profile-image {
+            width: 100%;
+            margin-bottom: 15px;
         }
-        .profile-picture img {
-            width: 80%;
-            border-radius: 10px;
-            margin-top: 10px;
+        .info-section {
+            margin-bottom: 15px;
         }
-        .connections, .information {
-            font-size: 14px;
+        .info-section h3 {
+            margin: 0 0 5px;
+            color: #333;
+        }
+        .info-section p {
+            margin: 0;
             color: #555;
-        }
-        .section-title {
-            font-weight: bold;
-            background-color: #f0f2f5;
-            padding: 5px;
-            text-align: left;
         }
     </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <td colspan="2" class="header">[thefacebook]</td>
-        </tr>
-        <tr>
-            <td class="sidebar">
-                <div>
-                    <a href="#">My Profile</a>
-                    <a href="#">My Friends</a>
-                    <a href="#">Messages</a>
-                    <a href="#">Photos</a>
-                    <a href="#">Groups</a>
-                </div>
-            </td>
-            <td>
-                <table style="width: 100%;">
-                    <tr>
-                        <td colspan="2" class="profile-picture">
-                            <img src="dota.jpg" alt="Profile Picture">
-                        </td>
-                    </tr>
-                    
-                    <tr>
-                        <td colspan="2" class="information">
-                            <div class="section-title">Information</div>
-                            <p><strong>Account Info:</strong></p>
-                            <p>Name: John Doe<br>
-                               Member Since: January 1, 2023<br>
-                               Last Login: February 2, 2023<br>
-                               Status: Active</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="connections">
-                            <div class="section-title">Connections</div>
-                            <p>Friends: 50<br>Groups: 3</p>
-                        </td>
-                        <td class="information">
-                            <div class="section-title">Additional Information</div>
-                            <p>Location: City, Country<br>
-                               High School: Example High<br>
-                               Interests: Music, Sports, Travel</p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+    <div id="header">
+        <h1>[ thefacebook ]</h1>
+        <p>home | search | global | social net | invite | faq | logout</p>
+    </div>
+    
+    <div id="container">
+        <div id="left-panel">
+            <h2>Scott Pearson's Profile</h2>
+            <div>
+                <img class="profile-image" src="dota.jpg" alt="Profile Picture">
+            </div>
+            <ul>
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">My Groups</a></li>
+                <li><a href="#">My Friends</a></li>
+                <li><a href="#">My Messages</a></li>
+                <li><a href="#">My Away Message</a></li>
+                <li><a href="#">My Mobile Info</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">My Privacy</a></li>
+            </ul>
+        </div>
+        
+        <div id="right-panel">
+            <h2>Information</h2>
+            <div class="info-section">
+                <h3>Account Info:</h3>
+                <p><strong>Name:</strong> Scott Pearson, BS</p>
+                <p><strong>Member Since:</strong> January 12, 2005</p>
+                <p><strong>Last Update:</strong> February 3, 2005</p>
+            </div>
+            <div class="info-section">
+                <h3>Basic Info:</h3>
+                <p><strong>Email:</strong> <a href="mailto:pearsons2@scranton.edu">pearsons2@scranton.edu</a></p>
+                <p><strong>Status:</strong> Alumnus/Alumna</p>
+                <p><strong>Sex:</strong> Male</p>
+                <p><strong>Year:</strong> 2004</p>
+                <p><strong>Concentration:</strong> <a href="#">Computing Sciences</a>, <a href="#">Mathematics</a></p>
+                <p><strong>Phone:</strong> 570.499.4818</p>
+                <p><strong>High School:</strong> <a href="#">Dunmore HS '00</a></p>
+            </div>
+            <div class="info-section">
+                <h3>Extended Info:</h3>
+                <p><strong>Screenname:</strong> ScottieP77</p>
+                <p><strong>Looking For:</strong> Friendship, Dating, A Relationship</p>
+                <p><strong>Interested In:</strong> Women</p>
+                <p><strong>Relationship Status:</strong> Single</p>
+                <p><strong>Political Views:</strong> Liberal</p>
+                <p><strong>Interests:</strong> Drinking, Football, Basketball, Tennis</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
